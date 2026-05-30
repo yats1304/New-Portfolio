@@ -7,6 +7,7 @@ import Image from "next/image"
 const navItems = [
   { name: "Projects", href: SITE_SLUGS.projects },
   { name: "About", href: SITE_SLUGS.about },
+  { name: "Resume", href: SITE_SLUGS.resume },
 ]
 
 export const TopBarV2: React.FC = () => {

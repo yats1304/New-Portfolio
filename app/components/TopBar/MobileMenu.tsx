@@ -20,6 +20,14 @@ export const MobileMenu: React.FC<{ navItems: { name: string; href: string }[] }
           </Link>
         </li>
       ))}
+      <li
+        className="mobile-menu-item transform text-lg transition-all duration-300 ease-in-out"
+        style={{ "--index": navItems.length } as React.CSSProperties}
+      >
+        <Link href={SITE_SLUGS.resume} onClick={() => setMobileMenu("closed")} className="block pt-4 font-medium">
+          Resume
+        </Link>
+      </li>
       <li className={clsx("mobile-menu-item transform pt-3 transition-all duration-300 ease-in-out")}>
         <Link
           href={SITE_SLUGS.contact}

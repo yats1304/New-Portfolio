@@ -3,7 +3,7 @@ import { H3, Text } from "@/app/ui/Elements"
 import { MotionDiv } from "@/app/utils/lazy-ui"
 import { Icon } from "./Icon"
 import profilePhoto from "@/app/images/profile.webp"
-import { SITE_NAP, SITE_SLUGS } from "@/config/siteConfig"
+import { SITE_NAP, SITE_SLUGS, RESUME_PDF } from "@/config/siteConfig"
 import { Mail } from "@react-zero-ui/icon-sprite"
 import { BlackButtonLink } from "./ui/BlackButtonLink"
 import { WhiteButtonLink } from "./ui/WhiteButtonLink"
@@ -57,7 +57,7 @@ export const RecruiterContact: React.FC = () => {
               GitHub
             </WhiteButtonLink>
             <a
-              href={SITE_SLUGS.resume}
+              href={RESUME_PDF}
               download="Resume_Yatish_Chaubal.pdf"
               className="bubble-hover flex w-fit items-center gap-1.5 rounded-full border border-gray-300! bg-white px-4 py-3 text-sm font-medium whitespace-nowrap text-black shadow-lg transition-all duration-300 hover:translate-y-0.5 hover:shadow-none"
             >

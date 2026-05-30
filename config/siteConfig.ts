@@ -26,12 +26,14 @@ export const SITE_NAP = {
   favicon: "/yatish-logo.png",
 } as const
 
+export const RESUME_PDF = "/Resume%20(Yatish_Chaubal).pdf"
+
 export const SITE_SLUGS = {
   home: "/",
   projects: "/projects",
   contact: "/#contact",
   about: "/#about-yatish-chaubal",
-  resume: "/Resume%20(Yatish_Chaubal).pdf",
+  resume: "/resume",
   projectLinks: {
     frovo: "/projects/frovo",
     arrowVision: "/projects/arrow-vision",
