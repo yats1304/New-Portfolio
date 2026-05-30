@@ -11,9 +11,9 @@ const navItems = [
 
 export const TopBarV2: React.FC = () => {
   return (
-    <nav className="font-switzer fixed top-1 left-1/2 z-10 flex w-fit -translate-x-1/2 justify-center text-base sm:top-2.5 md:top-5 md:text-sm">
+    <nav className="font-switzer fixed top-1 left-1/2 z-50 flex w-fit -translate-x-1/2 justify-center text-base sm:top-2.5 md:top-5 md:text-sm">
       {/* Wrapper that grows/shrinks on mobile */}
-      <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white/80 shadow-md backdrop-blur-md">
+      <div className="nav-pill overflow-hidden rounded-3xl border border-gray-200 bg-white/80 shadow-md backdrop-blur-md">
         <div className="relative flex flex-col">
           {/* Top Row (always visible) */}
           <div className="flex items-center gap-4 px-4 py-3 md:gap-8 md:py-2.5">
