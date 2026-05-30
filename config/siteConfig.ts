@@ -31,6 +31,7 @@ export const SITE_SLUGS = {
   projects: "/projects",
   contact: "/#contact",
   about: "/#about-yatish-chaubal",
+  resume: "/Resume%20(Yatish_Chaubal).pdf",
   projectLinks: {
     frovo: "/projects/frovo",
     arrowVision: "/projects/arrow-vision",

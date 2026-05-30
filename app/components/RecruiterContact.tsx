@@ -3,7 +3,7 @@ import { H3, Text } from "@/app/ui/Elements"
 import { MotionDiv } from "@/app/utils/lazy-ui"
 import { Icon } from "./Icon"
 import profilePhoto from "@/app/images/profile.webp"
-import { SITE_NAP } from "@/config/siteConfig"
+import { SITE_NAP, SITE_SLUGS } from "@/config/siteConfig"
 import { Mail } from "@react-zero-ui/icon-sprite"
 import { BlackButtonLink } from "./ui/BlackButtonLink"
 import { WhiteButtonLink } from "./ui/WhiteButtonLink"
@@ -56,6 +56,18 @@ export const RecruiterContact: React.FC = () => {
               <Icon name="github" height={18} width={18} className="h-4.5 w-4.5" />
               GitHub
             </WhiteButtonLink>
+            <a
+              href={SITE_SLUGS.resume}
+              download="Resume_Yatish_Chaubal.pdf"
+              className="bubble-hover flex w-fit items-center gap-1.5 rounded-full border border-gray-300! bg-white px-4 py-3 text-sm font-medium whitespace-nowrap text-black shadow-lg transition-all duration-300 hover:translate-y-0.5 hover:shadow-none"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Download Resume
+            </a>
           </div>
         </MotionDiv>
       </div>
