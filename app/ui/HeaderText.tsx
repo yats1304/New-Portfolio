@@ -11,7 +11,7 @@ interface HeaderTextProps {
 export const HeaderText: React.FC<HeaderTextProps> = ({ title, titleHighlight, description, className }) => {
   return (
     <div className={"flex flex-col gap-6 md:flex-row md:items-center md:gap-12 " + className}>
-      <AnimatedH2 className="[flex:1_0_0px]">
+      <AnimatedH2 className="flex-[1_0_0px]">
         {title}
         {titleHighlight && (
           <>
@@ -21,7 +21,7 @@ export const HeaderText: React.FC<HeaderTextProps> = ({ title, titleHighlight, d
         )}
       </AnimatedH2>
       {description && (
-        <Typography as="div" size="lg" className="max-w-md [flex:0.5_0_0px]">
+        <Typography as="div" size="lg" className="max-w-md flex-[0.5_0_0px]">
           {description}
         </Typography>
       )}

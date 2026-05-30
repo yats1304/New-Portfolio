@@ -13,17 +13,18 @@ export const ResumePDFViewer = () => {
           className="mx-auto w-full max-w-4xl overflow-hidden rounded-2xl border border-gray-200 shadow-lg"
         >
           {/* Toolbar */}
-          <div className="flex items-center justify-between border-b border-gray-200 bg-white px-4 py-3 sm:px-5">
-            <div className="flex items-center gap-2 text-slate-600">
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <div className="flex items-center justify-between gap-3 border-b border-gray-200 bg-white px-4 py-3 sm:px-5">
+            {/* Filename — truncates if narrow */}
+            <div className="flex min-w-0 items-center gap-2 text-slate-600">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
                 <polyline points="14 2 14 8 20 8" />
               </svg>
-              <span className="text-sm font-medium text-slate-700">Resume_Yatish_Chaubal.pdf</span>
+              <span className="truncate text-sm font-medium text-slate-700">Resume_Yatish_Chaubal.pdf</span>
             </div>
 
-            <div className="flex items-center gap-2">
-              {/* Open in new tab — primary action on iOS Safari where iframes don't render PDFs */}
+            {/* Buttons — icon-only on mobile, icon + label on sm+ */}
+            <div className="flex shrink-0 items-center gap-2">
               <a
                 href={RESUME_PDF}
                 target="_blank"
@@ -48,7 +49,7 @@ export const ResumePDFViewer = () => {
                   <polyline points="7 10 12 15 17 10" />
                   <line x1="12" y1="15" x2="12" y2="3" />
                 </svg>
-                Download
+                <span className="hidden sm:inline">Download</span>
               </a>
             </div>
           </div>
