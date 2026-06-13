@@ -1,10 +1,10 @@
 import { StaticImageData } from "next/image"
 import klimatePreview from "@/app/images/klimate.webp"
+import hirenestPreview from "@/app/images/hirenest.webp"
 import { AnalyticCardProps } from "../components/ProjectSection/ResultsSection"
 import { RadialProgressRing } from "../components/ProjectSection/RadialProgressRing"
 import { LineChart } from "../components/ProjectSection/LineChart"
 import { REVIEW_MAP, type ReviewProps } from "./review-data"
-
 
 export interface ProjectHeroProps {
   title: string | React.ReactNode
@@ -32,7 +32,6 @@ export type ProjectData = {
   slug: string
 }
 
-
 export const frovo: ProjectData = {
   hero: {
     title: "Building the Digital Home for Frovo - India's Smart Vending Startup",
@@ -40,7 +39,9 @@ export const frovo: ProjectData = {
     year: "2025",
     description: (
       <>
-        Frovo is on a mission to make daily essentials available anytime, anywhere through smart vending machines across Bangalore - open 24/7, cashless, and powered by a mobile app. I designed and built their entire web presence from scratch: a high-converting consumer landing page, a B2B business solutions portal, a careers page, and a full contact system - giving this pre-launch startup a
+        Frovo is on a mission to make daily essentials available anytime, anywhere through smart vending machines across Bangalore - open 24/7, cashless, and
+        powered by a mobile app. I designed and built their entire web presence from scratch: a high-converting consumer landing page, a B2B business solutions
+        portal, a careers page, and a full contact system - giving this pre-launch startup a
         <span className="font-semibold">polished, production-ready platform</span> that communicates the brand clearly to both consumers and corporate partners.
       </>
     ),
@@ -81,11 +82,12 @@ export const arrowVision: ProjectData = {
     year: "2026",
     description: (
       <>
-        As a Founding Member and Full Stack Developer at ArrowVision, I built the entire digital platform for this agency offering design, development, marketing, and brand design services. From a bold dark-mode landing page to a curated work showcase and a 6-step process section, the site positions ArrowVision as a{" "}
-        <span className="font-semibold">premium, no-nonsense creative agency</span> that turns ideas into production-ready digital products.
+        As a Founding Member and Full Stack Developer at ArrowVision, I built the entire digital platform for this agency offering design, development,
+        marketing, and brand design services. From a bold dark-mode landing page to a curated work showcase and a 6-step process section, the site positions
+        ArrowVision as a <span className="font-semibold">premium, no-nonsense creative agency</span> that turns ideas into production-ready digital products.
       </>
     ),
-    categories: ["Web Development", "App Development","Web Design", "UI/UX", "Brand Design"],
+    categories: ["Web Development", "App Development", "Web Design", "UI/UX", "Brand Design"],
     link: "https://www.arrowvision.in",
   },
   slug: "arrow-vision",
@@ -190,6 +192,56 @@ export const travel: ProjectData = {
       percentageIncrease: 60,
       chart: <LineChart />,
       dataSource: "Compared to 3.4s industry benchmark",
+    },
+  ],
+}
+
+export const hirenest: ProjectData = {
+  hero: {
+    title: "HireNest – AI-Powered Recruitment Platform Built for Scale",
+    client: "Personal Project",
+    year: "2025",
+    description: (
+      <>
+        HireNest is a production-grade, microservices-based job portal that connects recruiters and job seekers through a fast, intelligent platform. Built on{" "}
+        <span className="font-semibold">Next.js, Node.js, PostgreSQL, Redis, Apache Kafka, and Docker</span>, it handles end-to-end recruitment workflows while
+        embedding AI at its core — including a <span className="font-semibold">Gemini 2.5 Flash–powered Career Guidance engine</span> and an AI Resume Analyzer
+        that scores resumes, surfaces strengths and gaps, and gives actionable ATS improvement tips. Deployed on AWS EC2 with Nginx as a reverse proxy, backed
+        by Razorpay for subscription billing.
+      </>
+    ),
+    categories: ["Next.js", "Node.js", "PostgreSQL", "Redis", "Kafka", "Docker", "AWS", "Gemini AI"],
+    link: "https://hirenest.yatishchaubal.online/",
+  },
+  slug: "hirenest",
+  beforeAfter: {
+    heroBefore: hirenestPreview,
+    heroBeforeMobile: hirenestPreview,
+    beforeAltText: "HireNest Job Portal Dashboard",
+    beforeMobileAltText: "HireNest Job Portal Mobile View",
+    afterAltText: "HireNest AI Features",
+  },
+  results: [
+    {
+      title: "Microservices",
+      description: "Independent services powering the platform",
+      percentageIncrease: 100,
+      chart: <RadialProgressRing percentage={100} />,
+      dataSource: "Auth · Utils · User · Job · Payment",
+    },
+    {
+      title: "AI Resume ATS",
+      description: "Resume analysis accuracy via Gemini 2.5 Flash",
+      percentageIncrease: 95,
+      chart: <RadialProgressRing percentage={95} />,
+      dataSource: "Tested across 10+ resume samples",
+    },
+    {
+      title: "Kafka Throughput",
+      description: "Event-driven message reliability under load",
+      percentageIncrease: 90,
+      chart: <RadialProgressRing percentage={90} />,
+      dataSource: "Measured via load testing on AWS EC2",
     },
   ],
 }

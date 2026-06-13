@@ -6,6 +6,8 @@ import type { Variants } from "motion"
 import { MotionUl, MotionLi } from "../utils/lazy-ui"
 import type { IconType } from "react-icons"
 import { FaHtml5 } from "react-icons/fa"
+import { FaAws } from "react-icons/fa6"
+import { DiRedis } from "react-icons/di"
 import { BiLogoCss3 } from "react-icons/bi"
 import {
   SiTailwindcss,
@@ -23,7 +25,11 @@ import {
   SiPrisma,
   SiGithub,
   SiPostman,
-  SiFigma ,
+  SiFigma,
+  SiApachekafka,
+  SiDocker,
+  SiNginx,
+  SiRazorpay,
 } from "react-icons/si"
 
 type TechItem = { name: string; icon: IconType }
@@ -45,11 +51,20 @@ const backendTech: TechItem[] = [
   { name: "MongoDB", icon: SiMongodb },
   { name: "PostgreSQL", icon: SiPostgresql },
   { name: "MySQL", icon: SiMysql },
+  { name: "Redis", icon: DiRedis },
+]
+
+const devOpsTech: TechItem[] = [
+  { name: "Docker", icon: SiDocker },
+  { name: "AWS EC2", icon: FaAws },
+  { name: "Nginx", icon: SiNginx },
+  { name: "Apache Kafka", icon: SiApachekafka },
 ]
 
 const toolsTech: TechItem[] = [
   { name: "Prisma", icon: SiPrisma },
   { name: "Mongoose", icon: SiMongoose },
+  { name: "Razorpay", icon: SiRazorpay },
   { name: "GitHub", icon: SiGithub },
   { name: "Postman", icon: SiPostman },
   { name: "Figma", icon: SiFigma },
@@ -121,13 +136,7 @@ function TechGroup({ label, items }: { label: string; items: TechItem[] }) {
       <Text size="sm" className="text-slate-400">
         {label}
       </Text>
-      <MotionUl
-        className="flex flex-wrap gap-3"
-        variants={container}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0 }}
-      >
+      <MotionUl className="flex flex-wrap gap-3" variants={container} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0 }}>
         {items.map(({ name, icon: Ic }) => (
           <MotionLi key={name} variants={element}>
             <div className="group relative">
@@ -138,7 +147,7 @@ function TechGroup({ label, items }: { label: string; items: TechItem[] }) {
               >
                 <Ic size={28} />
               </label>
-              <span className="absolute -top-7 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-black px-2 py-1 text-xs text-white opacity-0 transition delay-100 duration-300 group-hover:opacity-100 peer-checked:opacity-100">
+              <span className="absolute -top-7 left-1/2 -translate-x-1/2 rounded-full bg-black px-2 py-1 text-xs whitespace-nowrap text-white opacity-0 transition delay-100 duration-300 group-hover:opacity-100 peer-checked:opacity-100">
                 {name}
               </span>
             </div>
@@ -161,6 +170,7 @@ export const ServicesSectionV2: React.FC = ({ className = "" }: { className?: st
 
         <TechGroup label="Frontend" items={frontendTech} />
         <TechGroup label="Backend & Databases" items={backendTech} />
+        <TechGroup label="DevOps & Cloud" items={devOpsTech} />
         <TechGroup label="Tools" items={toolsTech} />
       </div>
 

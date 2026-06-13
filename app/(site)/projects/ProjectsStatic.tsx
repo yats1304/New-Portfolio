@@ -4,7 +4,9 @@ import frovoPreview from "@/app/images/frovo.webp"
 import arrowVisionPreview from "@/app/images/arrow-vision.webp"
 import klimatePreview from "@/app/images/klimate.webp"
 import travelPreview from "@/app/images/travel.webp"
+import hirenestPreview from "@/app/images/hirenest.webp"
 import { Link } from "@/app/utils/Link"
+import { SITE_SLUGS } from "@/config/siteConfig"
 
 type StaticProject = {
   id: string
@@ -21,13 +23,25 @@ type StaticProject = {
 
 export const STATIC_PROJECTS: StaticProject[] = [
   {
+    id: "hirenest",
+    src: hirenestPreview,
+    alt: "HireNest Preview",
+    color: "#6C47FF",
+    type: "Job Portal",
+    text: "View Project",
+    href: SITE_SLUGS.projectLinks.hirenest,
+    dataText: "View Project",
+    ariaLabel: "View HireNest Project",
+    isExternal: false,
+  },
+  {
     id: "frovo",
     src: frovoPreview,
     alt: "Frovo Preview",
     color: "#6C47FF",
     type: "Portfolio Website",
     text: "View Project",
-    href: "#",
+    href: SITE_SLUGS.projectLinks.frovo,
     dataText: "View Project",
     ariaLabel: "View Frovo Portfolio Project",
     isExternal: false,
@@ -39,7 +53,7 @@ export const STATIC_PROJECTS: StaticProject[] = [
     color: "#111111",
     type: "Portfolio Website",
     text: "View Project",
-    href: "#",
+    href: SITE_SLUGS.projectLinks.arrowVision,
     dataText: "View Project",
     ariaLabel: "View Arrow Vision Portfolio Project",
     isExternal: false,
@@ -51,7 +65,7 @@ export const STATIC_PROJECTS: StaticProject[] = [
     color: "#0EA5E9",
     type: "Weather Website",
     text: "View Project",
-    href: "#",
+    href: SITE_SLUGS.projectLinks.klimate,
     dataText: "View Project",
     ariaLabel: "View Klimate Weather Website Project",
     isExternal: false,
@@ -63,7 +77,7 @@ export const STATIC_PROJECTS: StaticProject[] = [
     color: "#F97316",
     type: "Travel Frontend",
     text: "View Project",
-    href: "#",
+    href: SITE_SLUGS.projectLinks.travel,
     dataText: "View Project",
     ariaLabel: "View Travel Frontend Project",
     isExternal: false,

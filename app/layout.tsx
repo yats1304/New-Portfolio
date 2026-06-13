@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 }
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <body {...bodyAttributes} className="relative min-w-75 bg-white" data-mobile-menu="closed" data-scrolled="up" suppressHydrationWarning>
         <MotionWrapper>
           {/* <DesktopCursor /> */}
@@ -45,10 +45,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             <TopBarV2 />
             {children}
 
-            <script
-              id="id-site-schema"
-              type="application/ld+json"
-            />
+            <script id="id-site-schema" type="application/ld+json" />
             <FooterV2 />
           </div>
         </MotionWrapper>
@@ -56,7 +53,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           <>
             <Clarity />
             {/* DO NOT TOUCH THIS UNLESS YOU KNOW WHAT YOU ARE DOING */}
-            <Script id="ms-internet-explorer-compatibility" strategy="lazyOnload"/>
+            <Script id="ms-internet-explorer-compatibility" strategy="lazyOnload" />
             <Analytics />
           </>
         )}

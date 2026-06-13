@@ -5,7 +5,7 @@ export const SITE_CONFIG = {
   description: "Portfolio of Yatish Chaubal, Seattle-based full-stack Developer. Specializing in Next.js, React, TypeScript, and Tailwind CSS.",
   url: DOMAIN_URL ?? "http://localhost:3000",
   siteName: "Yatish Chaubal",
-  keywords: ["Yatish Chaubal","Yatish", "Next.js", "React", "TypeScript", "Full-Stack Developer", "Mumbai"],
+  keywords: ["Yatish Chaubal", "Yatish", "Next.js", "React", "TypeScript", "Full-Stack Developer", "Mumbai"],
   ogImage: "/assets/bg-home-poster-optimized.webp",
   logo: "/yatish-logo.png",
 } as const
@@ -39,6 +39,7 @@ export const SITE_SLUGS = {
     arrowVision: "/projects/arrow-vision",
     klimate: "/projects/klimate",
     travel: "/projects/travel",
+    hirenest: "/projects/hirenest",
   },
 } as const
 

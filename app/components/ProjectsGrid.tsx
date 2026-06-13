@@ -3,7 +3,7 @@ import { AnimatedCard, HeroOffset } from "./ProjectCard/AnimatedCard"
 import frovoPreview from "@/app/images/frovo.webp"
 import arrowVisionPreview from "@/app/images/arrow-vision.webp"
 import klimatePreview from "@/app/images/klimate.webp"
-import travelPreview from "@/app/images/travel.webp"
+import hirenestPreview from "@/app/images/hirenest.webp"
 import clsx from "clsx"
 import { useOffset } from "../hooks/useOffset"
 import { useIsMobile } from "../hooks/useMediaQuery"
@@ -11,7 +11,7 @@ import { useRef, useEffect } from "react"
 import { useScroll, useSpring } from "motion/react"
 import { useUI } from "@react-zero-ui/core"
 
-const ids = ["frovo", "arrow-vision", "klimate", "travel"]
+const ids = ["frovo", "arrow-vision", "klimate", "hirenest"]
 
 export function ProjectsGrid({ className }: { className?: string }) {
   const ref = useRef<HTMLDivElement>(null)
@@ -33,7 +33,7 @@ export function ProjectsGrid({ className }: { className?: string }) {
     frovo: { rot: 9, s: responsiveScale, dx: isMobile ? 0 : -30, dy: isMobile ? 0 : -40 },
     "arrow-vision": { rot: -5, s: responsiveScale, dx: isMobile ? 0 : -60, dy: isMobile ? 0 : -40 },
     klimate: { rot: 5, s: responsiveScale, dx: isMobile ? 0 : -45, dy: isMobile ? 0 : -25 },
-    travel: { rot: 12, s: responsiveScale, dx: isMobile ? 0 : -50, dy: isMobile ? 0 : -10 },
+    hirenest: { rot: 12, s: responsiveScale, dx: isMobile ? 0 : -50, dy: isMobile ? 0 : -10 },
   }
 
   const offsets = Object.fromEntries(
@@ -68,6 +68,17 @@ export function ProjectsGrid({ className }: { className?: string }) {
     <section id="projects-grid" className={clsx("relative scroll-mt-36", className)} ref={ref}>
       <div className="relative z-4 grid grid-cols-1 grid-rows-1 gap-4 md:grid-cols-2 md:grid-rows-2">
         <AnimatedCard
+          key="hirenest"
+          src={hirenestPreview}
+          alt={"HireNest Preview"}
+          offset={offsets["hirenest"]}
+          gridId="hirenest"
+          color="#F97316"
+          type="HireNest Full-Stack"
+          progress={progress}
+          dataText="View Project"
+        />
+        <AnimatedCard
           key="frovo"
           src={frovoPreview}
           alt={"Frovo Preview"}
@@ -97,17 +108,6 @@ export function ProjectsGrid({ className }: { className?: string }) {
           gridId="klimate"
           color="#0EA5E9"
           type="Weather Website"
-          progress={progress}
-          dataText="View Project"
-        />
-        <AnimatedCard
-          key="travel"
-          src={travelPreview}
-          alt={"Travel Preview"}
-          offset={offsets["travel"]}
-          gridId="travel"
-          color="#F97316"
-          type="Travel Frontend"
           progress={progress}
           dataText="View Project"
         />
